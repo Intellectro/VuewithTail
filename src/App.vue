@@ -1,6 +1,6 @@
 <template>
     <Login v-show="showOffData" @toggleViews="toggleViews" />
-    <router-view v-show="routerShow"></router-view>
+    <router-view v-show="routerShow" @toggleViews="toggleViews"></router-view>
 </template>
 
 <script>
