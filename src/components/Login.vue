@@ -1,6 +1,6 @@
 <template>
     <div class="2xl:container h-screen mx-auto">
-        <Header text="Login" text_two="Register" />
+        <Header @toggleViews="$emit('toggleViews')" text="Login" text_two="Register" />
         <div class="h-4/5 mt-4 flex justify-center items-center">
             <div class="w-2/5 h-80 flex flex-col gap-3 lg:w-[70%] xs:w-full xs:px-10">
                 <div class="font-bold text-black text-[40px] text-justify sm:text-sm">Welcome back&comma;</div>
