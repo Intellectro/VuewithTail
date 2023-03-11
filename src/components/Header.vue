@@ -5,7 +5,7 @@
             </div>
             <ul class="flex gap-10 list-none text-sm text-white sm:gap-4">
                 <router-link :to="textDoc"><li><a class="" href="#">{{text}}</a></li></router-link>
-                <router-link :to="textDoc2"><li><a class="" href="#"></a>{{text_two}}</li></router-link>
+                <router-link @click="onClick()" :to="textDoc2"><li><a class="" href="#"></a>{{text_two}}</li></router-link>
             </ul>
         </div>
 </template>
@@ -21,6 +21,11 @@
             return {
                 textDoc : this.text === "Logout" ? "/login" : "/",
                 textDoc2 : this.text_two === "My Bucket" ? "/" : "/signup"
+            }
+        },
+        methods: {
+            onClick() {
+                this.$emit("toggleViews")
             }
         }
     }
